@@ -13,6 +13,8 @@ try:
     msg = input('Enter commit message: ')
     upload(f'commit -m "{msg}"' if msg else 'commit -m "file created/ modified"')
     time.sleep(1)
+    upload('pull')
+    time.sleep(1)
     upload('push -u origin main')
 
 except Exception as e:
